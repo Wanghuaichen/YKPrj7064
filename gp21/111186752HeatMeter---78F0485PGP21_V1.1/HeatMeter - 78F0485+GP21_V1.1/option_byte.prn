@@ -1,0 +1,49 @@
+
+
+
+78K/0 Series Assembler V4.00                                                                            Date:30 Oct 2010 Page:   1
+
+
+
+Command:  -cF0485 -yC:\Program Files\NEC Electronics Tools\DEV -_msgoff Source\option_byte.asm
+Para-file:
+In-file:  Source\option_byte.asm
+Obj-file: option_byte.rel
+Prn-file: option_byte.prn
+
+      Assemble list
+
+ ALNO  STNO ADRS  OBJECT   M I  SOURCE STATEMENT
+
+    1     1                     
+    2     2                     
+    3     3                     ; set OptionByte
+    4     4 ----                OPT CSEG AT 0080H
+    5     5 0080  00            OPTION:   DB 00H
+    6     6                     ;
+    7     7                     ; set POC
+    8     8                     ;   Same default
+    9     9 0081  00            POC:      DB  00H
+   10    10                     ;
+   11    11                     ; Reserve
+   12    12 0082  00            RESERVE1: DB  00H
+   13    13                     ;
+   14    14                     ; Reserve
+   15    15 0083  00            RESERVE2: DB  00H
+   16    16                     ;
+   17    17                     ; set SecurityFlag for OnchipDebug
+   18    18                     ;   SecurityID(10bytes) refer to the Linker option
+   19    19 0084  03            SECURITY: DB  03H
+   20    20                     ;
+   21    21                     END
+
+Segment informations:
+
+ADRS  LEN      NAME
+
+0080  0005H    OPT
+
+ Target chip : uPD78F0485
+ Device file : V1.12
+Assembly complete,     0 error(s) and     0 warning(s) found. (    0)
+

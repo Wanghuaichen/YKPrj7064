@@ -1,0 +1,15 @@
+"C:\Program Files\NEC Electronics Tools\CC78K0\V4.00\bin\cc78k0.exe" -cF0485 -y"C:\Program Files\NEC Electronics Tools\DEV" -_msgoff -zp Source\Main.c
+Compilation complete,    0 error(s) and    0 warning(s) found.
+"C:\Program Files\NEC Electronics Tools\RA78K0\V4.01\bin\ra78k0.exe" -cF0485 -y"C:\Program Files\NEC Electronics Tools\DEV" -_msgoff  Source\OptionByte.asm
+Assembly complete,     0 error(s) and     0 warning(s) found.
+"C:\Program Files\NEC Electronics Tools\CC78K0\V4.00\bin\cc78k0.exe" -cF0485 -y"C:\Program Files\NEC Electronics Tools\DEV" -_msgoff -zp Source\System.c
+Compilation complete,    0 error(s) and    0 warning(s) found.
+"C:\Program Files\NEC Electronics Tools\CC78K0\V4.00\bin\cc78k0.exe" -cF0485 -y"C:\Program Files\NEC Electronics Tools\DEV" -_msgoff -zp Source\GP21.c
+Compilation complete,    0 error(s) and    0 warning(s) found.
+"C:\Program Files\NEC Electronics Tools\RA78K0\V4.01\bin\lk78k0.exe" -y"C:\Program Files\NEC Electronics Tools\DEV" -_msgoff -oa.lmf "C:\Program Files\NEC Electronics Tools\CC78K0\V4.00\lib78k0\s0l.rel"  -go256 -gi0FFFFFFFFFFFFFFFFFFFFh -pa.map -bcl0.lib -bcl0f.lib -i"C:\Program Files\NEC Electronics Tools\CC78K0\V4.00\lib78k0" -s  Main.rel OptionByte.rel System.rel GP21.rel 
+Link complete,     0 error(s) and     0 warning(s) found.
+"C:\Program Files\NEC Electronics Tools\RA78K0\V4.01\bin\oc78k0.exe" -y"C:\Program Files\NEC Electronics Tools\DEV" -_msgoff  a.lmf
+
+Object Conversion Complete,      0 error(s) and     0 warning(s) found.
+
+Build Total error(s) : 0  Total warning(s) : 0 

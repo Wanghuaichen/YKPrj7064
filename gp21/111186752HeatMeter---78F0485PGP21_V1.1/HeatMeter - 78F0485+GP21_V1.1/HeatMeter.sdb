@@ -1,0 +1,17 @@
+[SdbInfo]
+Ver=5
+[Source\Main.c]
+T=4de89643
+1=Source\GP21.h
+2=Source\System.h
+[Source\OptionByte.asm]
+T=4ce9e0a4
+[Source\System.c]
+T=4de077ea
+1=Source\System.h
+[Source\GP21.c]
+T=4de892a1
+[Source\GP21.h]
+T=4de09b75
+[Source\System.h]
+T=4dc8f186

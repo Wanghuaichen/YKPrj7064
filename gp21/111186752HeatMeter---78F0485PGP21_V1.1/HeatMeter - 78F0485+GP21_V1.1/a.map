@@ -1,0 +1,170 @@
+
+
+
+78K/0 Series Linker V4.01                     Date: 3 Jun 2011 Page:   1
+
+Command:   -yC:\Program Files\NEC Electronics Tools\DEV -_msgoff -oa.lmf
+            C:\Program Files\NEC Electronics Tools\CC78K0\V4.00\lib78k0\
+           s0l.rel -go256 -gi0FFFFFFFFFFFFFFFFFFFFh -pa.map -bcl0.lib -b
+           cl0f.lib -iC:\Program Files\NEC Electronics Tools\CC78K0\V4.0
+           0\lib78k0 -s Main.rel OptionByte.rel System.rel GP21.rel
+Para-file:
+Out-file:  a.lmf
+Map-file:  a.map
+Direc-file:
+Directive:
+
+
+*** Link information ***
+
+    20 output segment(s)
+  E11H byte(s) real data
+   630 symbol(s) defined
+
+
+*** Memory map ***
+
+
+  SPACE=REGULAR
+
+  MEMORY=ROM
+  BASE ADDRESS=0000H    SIZE=F000H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@VECT00                     0000H     0002H   CSEG AT
+                  @@VECT00 @cstart    0000H     0002H
+         @@CALT                       0002H     0000H   CSEG
+                  @@CALT   @cstart    0002H     0000H
+                  @@CALT   Main       0002H     0000H
+                  @@CALT   System     0002H     0000H
+                  @@CALT   GP21       0002H     0000H
+         @@CALF                       0002H     0000H   CSEG
+                  @@CALF   @cstart    0002H     0000H
+                  @@CALF   Main       0002H     0000H
+                  @@CALF   System     0002H     0000H
+                  @@CALF   GP21       0002H     0000H
+* gap (Not Free Area) *               0002H     0002H
+* gap *                               0004H     001CH
+         @@VECT20                     0020H     0002H   CSEG AT
+                  @@VECT20 Main       0020H     0002H
+* gap *                               0022H     0006H
+         @@VECT28                     0028H     0002H   CSEG AT
+                  @@VECT28 Main       0028H     0002H
+* gap *                               002AH     0002H
+         @@VECT2C                     002CH     0002H   CSEG AT
+                  @@VECT2C Main       002CH     0002H
+* gap *                               002EH     0050H
+         ONC_SBR                      007EH     0002H   CSEG AT
+                  ONC_SBR  OptionByte
+                                      007EH     0002H
+         @@R_INIS                     0080H     0000H   CSEG UNITP
+                  @@R_INIS @cstart    0080H     0000H
+                  @@R_INIS Main       0080H     0000H
+                  @@R_INIS System     0080H     0000H
+                  @@R_INIS GP21       0080H     0000H
+                  @@R_INIS @rom       0080H     0000H
+         @@CNST                       0080H     0000H   CSEG UNITP
+
+
+
+78K/0 Series Linker V4.01                     Date: 3 Jun 2011 Page:   2
+
+                  @@CNST   @cstart    0080H     0000H
+                  @@CNST   Main       0080H     0000H
+                  @@CNST   System     0080H     0000H
+                  @@CNST   GP21       0080H     0000H
+         OPT                          0080H     0005H   CSEG AT
+                  OPT      OptionByte
+                                      0080H     0005H
+         ?CSEGSI                      0085H     000AH   CSEG
+* gap (Not Free Area) *               008FH     0101H
+         @@R_INIT                     0190H     0014H   CSEG UNITP
+                  @@R_INIT @cstart    0190H     0000H
+                  @@R_INIT Main       0190H     0014H
+                  @@R_INIT System     01A4H     0000H
+                  @@R_INIT GP21       01A4H     0000H
+                  @@R_INIT @rom       01A4H     0000H
+         @@LCODE                      01A4H     01FFH   CSEG
+                  @@LCODE  @cstart    01A4H     0076H
+                  @@LCODE  @lsdiv     021AH     005AH
+                  @@LCODE  @ludiv     0274H     0071H
+                  @@LCODE  @ladd      02E5H     0015H
+                  @@LCODE  @lsub      02FAH     0019H
+                  @@LCODE  @lursh     0313H     001EH
+                  @@LCODE  @lscmp     0331H     0023H
+                  @@LCODE  @lband     0354H     0015H
+                  @@LCODE  @lbor      0369H     0015H
+                  @@LCODE  @hdwinit   037EH     0001H
+                  @@LCODE  exit       037FH     0024H
+         @@CODE                       03A3H     0BE5H   CSEG
+                  @@CODE   Main       03A3H     0195H
+                  @@CODE   System     0538H     0256H
+                  @@CODE   GP21       078EH     07FAH
+* gap *                               0F88H     E078H
+
+  MEMORY=IXRAM
+  BASE ADDRESS=F400H    SIZE=0400H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               F400H     0400H
+
+  MEMORY=LRAM
+  BASE ADDRESS=FA00H    SIZE=0020H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FA00H     0020H
+
+  MEMORY=DSPRAM
+  BASE ADDRESS=FA40H    SIZE=0028H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+* gap *                               FA40H     0028H
+
+  MEMORY=RAM
+  BASE ADDRESS=FB00H    SIZE=0500H
+         OUTPUT   INPUT    INPUT      BASE      SIZE
+         SEGMENT  SEGMENT  MODULE     ADDRESS
+         @@DATA                       FB00H     0078H   DSEG UNITP
+                  @@DATA   @cstart    FB00H     0078H
+                  @@DATA   Main       FB78H     0000H
+                  @@DATA   System     FB78H     0000H
+                  @@DATA   GP21       FB78H     0000H
+                  @@DATA   @rom       FB78H     0000H
+
+
+
+78K/0 Series Linker V4.01                     Date: 3 Jun 2011 Page:   3
+
+         @@INIT                       FB78H     0014H   DSEG UNITP
+                  @@INIT   @cstart    FB78H     0000H
+                  @@INIT   Main       FB78H     0014H
+                  @@INIT   System     FB8CH     0000H
+                  @@INIT   GP21       FB8CH     0000H
+                  @@INIT   @rom       FB8CH     0000H
+         @@INIS                       FB8CH     0000H   DSEG UNITP
+                  @@INIS   @cstart    FB8CH     0000H
+                  @@INIS   Main       FB8CH     0000H
+                  @@INIS   System     FB8CH     0000H
+                  @@INIS   GP21       FB8CH     0000H
+                  @@INIS   @rom       FB8CH     0000H
+         @@DATS                       FB8CH     0000H   DSEG UNITP
+                  @@DATS   @cstart    FB8CH     0000H
+                  @@DATS   Main       FB8CH     0000H
+                  @@DATS   System     FB8CH     0000H
+                  @@DATS   GP21       FB8CH     0000H
+                  @@DATS   @rom       FB8CH     0000H
+         @@BITS                       FB8CH     0000H   BSEG
+                  @@BITS   @cstart    FB8CH.0   0000H.0
+                  @@BITS   Main       FB8CH.0   0000H.0
+                  @@BITS   System     FB8CH.0   0000H.0
+                  @@BITS   GP21       FB8CH.0   0000H.0
+* gap *                               FB8CH     032CH
+         @@RTARG0                     FEB8H     0008H   DSEG AT
+                  @@RTARG0 @RTARG0    FEB8H     0008H
+* gap *                               FEC0H     0040H
+* gap (Not Free Area) *               FF00H     0100H
+
+
+ Target chip : uPD78F0485
+ Device file : V1.12
+

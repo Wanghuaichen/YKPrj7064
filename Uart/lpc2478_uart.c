@@ -489,6 +489,21 @@ static void  Printer_TABLE(void)
   send_tmp[6]  = ' '; 
   send_tmp[7]  = 0x00;
   UART_PrintStr(send_tmp);
+  
+  //print unit
+    ///////////////////////////////////////环境温度
+  if(CHINESE == Get_Language_Type())
+   {
+    Printer_CH_MODE();
+    UART_PrintStr("摄氏度");
+   }
+  else
+   {
+    UART_PrintStr("degree Celsius");
+   } 
+  
+  Printer_EN_MODE();
+  
   Printer_enter();
   ///////////////////////////////////////当前模式
   if(CHINESE == Get_Language_Type())
@@ -591,12 +606,15 @@ static void  Printer_data(void)
   else
   send_tmp[i++]  = ' ';
   
-  if(QIAN_DIVISION == dot_position)
-  sprintf(&send_tmp[i],"%7.3f",net_weight);
-  else 
-  sprintf(&send_tmp[i],"%8.4f",net_weight);    //发送净重
-  
-  i+=8;
+  if(QIAN_DIVISION == dot_position) {
+    sprintf(&send_tmp[i],"%7.3f",net_weight);
+    i+=7;
+    send_tmp[i++]  = ' ';      
+  }
+  else {
+    sprintf(&send_tmp[i],"%8.4f",net_weight);    //发送净重
+    i+=8;
+  } 
   send_tmp[i++]  = ' ';
   switch(current_unit)
   {

@@ -646,7 +646,7 @@ uint8  Init_Cal_Varible(void)
 	 user_inncal_data  = (WeighCalData[8]<<24) + (WeighCalData[9]<<16) + (WeighCalData[10]<<8) + WeighCalData[11];
 	 
 	 //数据有效的条件1      
-	 if((full_code==full_bak)&&(full_code>inner_code_min)&&(full_code<inner_code_max))
+	 if(full_code==full_bak) //&&(full_code>inner_code_min)&&(full_code<inner_code_max))
 	 //if(full_code == full_bak)
 	 {
    	  inner_code_step = full_code/system_division;

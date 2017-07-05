@@ -10,7 +10,7 @@
 
 //内校准版本增加了马达驱动
 //修改了主菜单项目 把无线配置修改为内校操作
-#define INNER_CAL_VERSION          1 //是否内校准版本
+#define INNER_CAL_VERSION          0 //是否内校准版本
 
 #define DOUBLE_DIVISION            0  //是否双量程版本
 //#define DOUBLE_DIVISION          0
